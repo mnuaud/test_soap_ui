@@ -32,7 +32,6 @@
             </executions>                      
             <configuration>
                <projectFile>Hermes-soapui-project.xml</projectFile>
-               <host>ws-ecom-local.hermes.com</host>
                <outputFolder>${project.build.directory}/surefire-reports</outputFolder>
                <junitReport>true</junitReport>
                <printReport>false</printReport>
