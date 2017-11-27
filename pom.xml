@@ -3,12 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
    <modelVersion>4.0.0</modelVersion>
 
-   <name>USHoliday Web Service Test Module</name>
-   <groupId>tdrury</groupId>
-   <artifactId>usholidays.webservices.test</artifactId>
+   <name>Hermes Salability Web Service Test Module</name>
+   <groupId>Hermes</groupId>
+   <artifactId>hermes.webservices.test</artifactId>
    <version>1.0-SNAPSHOT</version>
    <packaging>jar</packaging>
-   <description>USHoliday web services soapUI integration tests</description>    
+   <description>Hermes web services soapUI demo</description>    
     <pluginRepositories>
         <pluginRepository>
             <id>SmartBearPluginRepository</id>
@@ -23,7 +23,7 @@
             <version>3.6.1</version>
             <executions>
                <execution>
-                  <id>USHolidayTests</id>
+                  <id>Hermes</id>
                   <goals>
                      <goal>test</goal>
                   </goals>
@@ -32,12 +32,12 @@
             </executions>                      
             <configuration>
                <projectFile>Hermes-soapui-project.xml</projectFile>
-               <host>https://ws-ecom-local.hermes.com</host>
+               <host>ws-ecom-local.hermes.com</host>
                <outputFolder>${project.build.directory}/surefire-reports</outputFolder>
                <junitReport>true</junitReport>
                <printReport>false</printReport>
                <projectProperties>
-                  <projectProperty>YEAR=2011</projectProperty>
+                  <projectProperty>YEAR=2017</projectProperty>
                </projectProperties>
             </configuration>
          </plugin>  
