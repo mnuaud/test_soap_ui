@@ -25,8 +25,8 @@
                </execution>
             </executions>                      
             <configuration>
-               <projectFile>src/test/soapui/USHolidayDates-soapui-project.xml</projectFile>
-               <host>www.27seconds.com</host>
+               <projectFile>Hermes-soapui-project.xml</projectFile>
+               <host>https://ws-ecom-local.hermes.com</host>
                <outputFolder>${project.build.directory}/surefire-reports</outputFolder>
                <junitReport>true</junitReport>
                <printReport>false</printReport>
