@@ -273,7 +273,6 @@
     </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>]]></con:request><con:assertion type="SOAP Response" id="dcfe4e5d-ca65-400c-a06b-3aa7a6c9f11a"/><con:assertion type="XPath Match" id="9ada3af2-ae70-412e-8d15-23bf45efe102" name="check_stock_>_0"><con:configuration><path>declare namespace ns1='urn:Magento';
 declare namespace ns2='http://xml.apache.org/xml-soap';
-declare namespace SOAP-ENC='http://schemas.xmlsoap.org/soap/encoding/';
 declare namespace SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/';
 number(/SOAP-ENV:Envelope/SOAP-ENV:Body/ns1:callResponse/callReturn/item[contains(key,'stock')]/value/text())>0</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="step_check_salability_store_not_exists" id="35f1c7df-39e1-4bbc-b72d-847ecf543f8f"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>Binding</con:interface><con:operation>resources</con:operation><con:request name="step_check_salability_store_not_exists" id="38699a92-f1c9-4df9-b49c-4911d3b91c84"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://admin-ecom-tst.hermes.com/index.php/api/soap/index/</con:endpoint><con:request><![CDATA[
 <SOAP-ENV:Envelope
@@ -293,23 +292,6 @@ number(/SOAP-ENV:Envelope/SOAP-ENV:Body/ns1:callResponse/callReturn/item[contain
         </ns1:call>
     </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>]]></con:request><con:assertion type="SOAP Response" id="dcfe4e5d-ca65-400c-a06b-3aa7a6c9f11a"/><con:assertion type="XPath Match" id="318adc6d-b02e-42e9-8c73-3f4c7187b262" name="check_store_not_found"><con:configuration><path>declare namespace SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/';
-/SOAP-ENV:Envelope/SOAP-ENV:Body/SOAP-ENV:Fault/faultcode/text()</path><content>100</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="step_check_err100" id="dd11f012-33ec-4142-9f77-9f9f811e1f7e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>Binding</con:interface><con:operation>call</con:operation><con:request name="step_check_err100" id="4ab145a9-9e15-4439-a41b-dc66babe0a06"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://admin-ecom-tst.hermes.com/index.php/api/soap/index/</con:endpoint><con:request><![CDATA[<SOAP-ENV:Envelope
-    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
-    xmlns:ns1="urn:Magento"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
-    <SOAP-ENV:Body>
-        <ns1:call>
-            <sessionId xsi:type="xsd:string">${step_login#Response#/SOAP-ENV:Envelope/SOAP-ENV:Body/ns1:loginResponse/loginReturn/text()}</sessionId>
-            <resourcePath xsi:type="xsd:string">catalog_product.salability</resourcePath>
-            <args SOAP-ENC:arrayType="xsd:string[2]" xsi:type="SOAP-ENC:Array">
-                <item xsi:type="xsd:string">${Prop_hermes_test_values#valid_product}</item>
-                <item xsi:type="xsd:string">${Prop_hermes_test_values#invalid_shop}</item>
-            </args>
-        </ns1:call>
-    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>]]></con:request><con:assertion type="SOAP Response" id="0b458125-54fc-4e56-8a91-d6938df58569"/><con:assertion type="XPath Match" id="c7ffe409-5ff9-41ae-b3dc-5aea84e73f77" name="check_err_code"><con:configuration><path>declare namespace SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/';
 /SOAP-ENV:Envelope/SOAP-ENV:Body/SOAP-ENV:Fault/faultcode/text()</path><content>100</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="step_check_err101" id="5fb53488-f279-4994-b666-0d5473c39f62"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>Binding</con:interface><con:operation>call</con:operation><con:request name="step_check_err101" id="4ab145a9-9e15-4439-a41b-dc66babe0a06"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://admin-ecom-tst.hermes.com/index.php/api/soap/index/</con:endpoint><con:request><![CDATA[<SOAP-ENV:Envelope
     xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
     xmlns:ns1="urn:Magento"
@@ -327,41 +309,7 @@ number(/SOAP-ENV:Envelope/SOAP-ENV:Body/ns1:callResponse/callReturn/item[contain
         </ns1:call>
     </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>]]></con:request><con:assertion type="SOAP Response" id="0b458125-54fc-4e56-8a91-d6938df58569"/><con:assertion type="XPath Match" id="c7ffe409-5ff9-41ae-b3dc-5aea84e73f77" name="check_err_code"><con:configuration><path>declare namespace SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/';
-/SOAP-ENV:Envelope/SOAP-ENV:Body/SOAP-ENV:Fault/faultcode/text()</path><content>101</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="step_check_err102" id="79ed561f-d766-4408-a801-c5793b180e02" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>Binding</con:interface><con:operation>call</con:operation><con:request name="step_check_err102" id="4ab145a9-9e15-4439-a41b-dc66babe0a06"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://admin-ecom-tst.hermes.com/index.php/api/soap/index/</con:endpoint><con:request><![CDATA[<SOAP-ENV:Envelope
-    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
-    xmlns:ns1="urn:Magento"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
-    <SOAP-ENV:Body>
-        <ns1:call>
-            <sessionId xsi:type="xsd:string">${step_login#Response#/SOAP-ENV:Envelope/SOAP-ENV:Body/ns1:loginResponse/loginReturn/text()}</sessionId>
-            <resourcePath xsi:type="xsd:string">catalog_product.salability</resourcePath>
-            <args SOAP-ENC:arrayType="xsd:string[2]" xsi:type="SOAP-ENC:Array">
-                <item xsi:type="xsd:string">${Prop_hermes_test_values#valid_product}</item>
-                <item xsi:type="xsd:string">${Prop_hermes_test_values#valid_shop}</item>
-            </args>
-        </ns1:call>
-    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>]]></con:request><con:assertion type="SOAP Response" id="0b458125-54fc-4e56-8a91-d6938df58569"/><con:assertion type="XPath Match" id="c7ffe409-5ff9-41ae-b3dc-5aea84e73f77" name="check_err_code"><con:configuration><path>declare namespace SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/';
-/SOAP-ENV:Envelope/SOAP-ENV:Body/SOAP-ENV:Fault/faultcode/text()</path><content>102</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="step_check_err103" id="581bb2bd-ede4-4914-9324-36097e1266c7" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>Binding</con:interface><con:operation>call</con:operation><con:request name="step_check_err103" id="4ab145a9-9e15-4439-a41b-dc66babe0a06"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://admin-ecom-tst.hermes.com/index.php/api/soap/index/</con:endpoint><con:request><![CDATA[<SOAP-ENV:Envelope
-    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
-    xmlns:ns1="urn:Magento"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
-    <SOAP-ENV:Body>
-        <ns1:call>
-            <sessionId xsi:type="xsd:string">${step_login#Response#/SOAP-ENV:Envelope/SOAP-ENV:Body/ns1:loginResponse/loginReturn/text()}</sessionId>
-            <resourcePath xsi:type="xsd:string">catalog_product.salability</resourcePath>
-            <args SOAP-ENC:arrayType="xsd:string[2]" xsi:type="SOAP-ENC:Array">
-                <item xsi:type="xsd:string">${Prop_hermes_test_values#valid_product}</item>
-                <item xsi:type="xsd:string">${Prop_hermes_test_values#valid_shop}</item>
-            </args>
-        </ns1:call>
-    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>]]></con:request><con:assertion type="SOAP Response" id="0b458125-54fc-4e56-8a91-d6938df58569"/><con:assertion type="XPath Match" id="c7ffe409-5ff9-41ae-b3dc-5aea84e73f77" name="check_err_code"><con:configuration><path>declare namespace SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/';
-/SOAP-ENV:Envelope/SOAP-ENV:Body/SOAP-ENV:Fault/faultcode/text()</path><content>103</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="step_check_err104" id="22a9f41d-2f3f-40bd-87ec-033ea43e995e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>Binding</con:interface><con:operation>call</con:operation><con:request name="step_check_err104" id="4ab145a9-9e15-4439-a41b-dc66babe0a06"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://admin-ecom-tst.hermes.com/index.php/api/soap/index/</con:endpoint><con:request><![CDATA[<SOAP-ENV:Envelope
+/SOAP-ENV:Envelope/SOAP-ENV:Body/SOAP-ENV:Fault/faultcode/text()</path><content>101</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="step_check_err104" id="22a9f41d-2f3f-40bd-87ec-033ea43e995e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>Binding</con:interface><con:operation>call</con:operation><con:request name="step_check_err104" id="4ab145a9-9e15-4439-a41b-dc66babe0a06"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://admin-ecom-tst.hermes.com/index.php/api/soap/index/</con:endpoint><con:request><![CDATA[<SOAP-ENV:Envelope
     xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
     xmlns:ns1="urn:Magento"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
