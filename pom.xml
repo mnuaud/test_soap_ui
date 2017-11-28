@@ -31,7 +31,7 @@
                </execution>
             </executions>                      
             <configuration>
-               <projectFile>ConvertTemperature.xml</projectFile>
+               <projectFile>ConvertTemperature-soapui-project.xml</projectFile>
                <outputFolder>${project.build.directory}/surefire-reports</outputFolder>
                <junitReport>true</junitReport>
                <printReport>false</printReport>
