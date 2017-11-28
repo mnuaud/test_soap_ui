@@ -31,7 +31,7 @@
                </execution>
             </executions>                      
             <configuration>
-               <projectFile>Hermes-soapui-project.xml</projectFile>
+               <projectFile>ConvertTemperature.xml</projectFile>
                <outputFolder>${project.build.directory}/surefire-reports</outputFolder>
                <junitReport>true</junitReport>
                <printReport>false</printReport>
