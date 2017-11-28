@@ -132,31 +132,31 @@
       <http:address location="http://www.webservicex.net/ConvertTemperature.asmx"/>
     </wsdl:port>
   </wsdl:service>
-</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://www.webservicex.net/ConvertTemperature.asmx</con:endpoint></con:endpoints><con:operation id="f143d98b-d496-4ca4-9a09-03dc4c3ccfbf" isOneWay="false" action="http://www.webserviceX.NET/ConvertTemp" name="ConvertTemp" bindingOperationName="ConvertTemp" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e43fa2b9-a83a-4187-8b8b-d6599b4256ae" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/ConvertTemperature.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET/">\r
-   <soap:Header/>\r
-   <soap:Body>\r
-      <web:ConvertTemp>\r
-         <web:Temperature>?</web:Temperature>\r
-         <web:FromUnit>?</web:FromUnit>\r
-         <web:ToUnit>?</web:ToUnit>\r
-      </web:ConvertTemp>\r
-   </soap:Body>\r
-</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/ConvertTemperatureSoap/ConvertTempRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="1ee37c79-7127-44bf-af6f-de7aacbf56c1" name="ConvertTemperatureSoap12 TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="72a76ca2-0ecd-4d43-99fd-16ca9a5d035f" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ConvertTemp TestCase" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:settings/><con:testStep type="request" id="3f3080d2-eb44-4625-829c-81e6b2f1fbcb" name="ConvertTemp_should_fail"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ConvertTemperatureSoap12</con:interface><con:operation>ConvertTemp</con:operation><con:request name="ConvertTemp_should_fail" id="0e52e955-ebc0-4412-8dfb-f8c4375945dc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/ConvertTemperature.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET/">\r
-   <soap:Header/>\r
-   <soap:Body>\r
-      <web:ConvertTemp>\r
-         <web:Temperature>5</web:Temperature>\r
-         <web:FromUnit>degreeCelsius</web:FromUnit>\r
-         <web:ToUnit>degreeFahrenheit</web:ToUnit>\r
-      </web:ConvertTemp>\r
-   </soap:Body>\r
-</soap:Envelope>]]></con:request><con:assertion type="Valid HTTP Status Codes" id="66a2aa2e-b1ad-4cd1-80d6-3b3fc06b2423" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="3fa3311b-13bc-41dd-ad1b-49ded6ee24e7" name="Contains 1"><con:configuration><token>240</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.webserviceX.NET/ConvertTemperatureSoap/ConvertTempRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="bfb57f22-b46a-4b33-8f91-2e2a8ab26348" name="ConvertTemp_should_pass"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ConvertTemperatureSoap12</con:interface><con:operation>ConvertTemp</con:operation><con:request name="ConvertTemp_should_pass" id="0e52e955-ebc0-4412-8dfb-f8c4375945dc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/ConvertTemperature.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET/">\r
-   <soap:Header/>\r
-   <soap:Body>\r
-      <web:ConvertTemp>\r
-         <web:Temperature>5</web:Temperature>\r
-         <web:FromUnit>degreeCelsius</web:FromUnit>\r
-         <web:ToUnit>degreeFahrenheit</web:ToUnit>\r
-      </web:ConvertTemp>\r
-   </soap:Body>\r
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://www.webservicex.net/ConvertTemperature.asmx</con:endpoint></con:endpoints><con:operation id="f143d98b-d496-4ca4-9a09-03dc4c3ccfbf" isOneWay="false" action="http://www.webserviceX.NET/ConvertTemp" name="ConvertTemp" bindingOperationName="ConvertTemp" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e43fa2b9-a83a-4187-8b8b-d6599b4256ae" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/ConvertTemperature.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET/">
+   <soap:Header/>
+   <soap:Body>
+      <web:ConvertTemp>
+         <web:Temperature>?</web:Temperature>
+         <web:FromUnit>?</web:FromUnit>
+         <web:ToUnit>?</web:ToUnit>
+      </web:ConvertTemp>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/ConvertTemperatureSoap/ConvertTempRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="1ee37c79-7127-44bf-af6f-de7aacbf56c1" name="ConvertTemperatureSoap12 TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="72a76ca2-0ecd-4d43-99fd-16ca9a5d035f" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ConvertTemp TestCase" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:settings/><con:testStep type="request" id="3f3080d2-eb44-4625-829c-81e6b2f1fbcb" name="ConvertTemp_should_fail"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ConvertTemperatureSoap12</con:interface><con:operation>ConvertTemp</con:operation><con:request name="ConvertTemp_should_fail" id="0e52e955-ebc0-4412-8dfb-f8c4375945dc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/ConvertTemperature.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET/">
+   <soap:Header/>
+   <soap:Body>
+      <web:ConvertTemp>
+         <web:Temperature>5</web:Temperature>
+         <web:FromUnit>degreeCelsius</web:FromUnit>
+         <web:ToUnit>degreeFahrenheit</web:ToUnit>
+      </web:ConvertTemp>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:assertion type="Valid HTTP Status Codes" id="66a2aa2e-b1ad-4cd1-80d6-3b3fc06b2423" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="3fa3311b-13bc-41dd-ad1b-49ded6ee24e7" name="Contains 1"><con:configuration><token>240</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.webserviceX.NET/ConvertTemperatureSoap/ConvertTempRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="bfb57f22-b46a-4b33-8f91-2e2a8ab26348" name="ConvertTemp_should_pass"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ConvertTemperatureSoap12</con:interface><con:operation>ConvertTemp</con:operation><con:request name="ConvertTemp_should_pass" id="0e52e955-ebc0-4412-8dfb-f8c4375945dc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/ConvertTemperature.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET/">
+   <soap:Header/>
+   <soap:Body>
+      <web:ConvertTemp>
+         <web:Temperature>5</web:Temperature>
+         <web:FromUnit>degreeCelsius</web:FromUnit>
+         <web:ToUnit>degreeFahrenheit</web:ToUnit>
+      </web:ConvertTemp>
+   </soap:Body>
 </soap:Envelope>]]></con:request><con:assertion type="Valid HTTP Status Codes" id="66a2aa2e-b1ad-4cd1-80d6-3b3fc06b2423" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="ba4fba48-8d3c-4653-a2cd-c112e2359b27" name="Contains"><con:configuration><token>41</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.webserviceX.NET/ConvertTemperatureSoap/ConvertTempRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
